@@ -1,0 +1,32 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "massadedados": "npx playwright test --grep @MassaDeDados --workers 1",
+    "inserirusuario": "npx playwright test --grep @InsertNewUser --workers 1 --headed",
+    "loginvalido": "npx playwright test --grep @ValidLogin --workers 1 --headed",
+    "inserirendereco": "npx playwright test --grep @AddNewAddress --workers 1 --headed",
+    "esteira": "npm run massadedados && npm run inserirusuario && npm run inserirendereco --workers 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "@playwright/test": "^1.38.1",
+    "allure-commandline": "^2.17.2",
+    "experimental-allure-playwright": "^0.0.3"
+  },
+  "dependencies": {
+    "docker": "^1.0.0",
+    "dotenv": "^16.3.1",
+    "faker": "^5.5.3",
+    "faker-br": "^0.4.1",
+    "jspdf": "^2.5.1",
+    "modules": "^0.4.0",
+    "mssql": "^11.0.1",
+    "playwright": "^1.50.0",
+    "sql": "^0.78.0"
+  }
+}
